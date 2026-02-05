@@ -27,7 +27,19 @@ Enable a scalable, reliable, and auditable foundation for autonomous content ope
 - **Secure-by-design:** assume tool access is risky; define narrow interfaces and approval gates.
 
 ## Hard Constraints
+- **Spec-Driven Development:** No implementation code may be written until specifications are reviewed and considered ratified.
+- **Traceability Required:** MCP Sense must remain active during AI-assisted development to preserve decision provenance.
+- **No Hidden Logic:** All system behavior must be explicitly defined in specs; implicit assumptions are not allowed.
+- **Human-in-the-Loop Enforcement:** Any action that results in external publishing must include a defined human approval step.
+- **Reproducibility:** The environment must be containerizable and runnable in CI without relying on local state.
+- **Security First:** Secrets, tokens, and credentials must never be hardcoded or exposed in specs, tests, or examples.
 ## Non-Goals
+- Building or deploying a production-ready influencer during this challenge.
+- Optimizing content quality, virality, or engagement metrics.
+- Implementing platform-specific SDKs (YouTube, TikTok, Instagram) at this stage.
+- Designing user interfaces or dashboards.
+- Training or fine-tuning machine learning models.
+- Solving all edge cases related to content moderation or platform policy.
 ## Key Risks
 ## Success Criteria (Definition of Done)
 ## Assumptions
