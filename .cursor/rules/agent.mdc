@@ -1,0 +1,43 @@
+# Project Chimera — IDE Agent Rules (TRP1 Week 0)
+
+## Project Context
+You are assisting in **Project Chimera**, an agentic infrastructure project to build the **factory** for an Autonomous AI Influencer.
+This repo is built using **Spec-Driven Development (SDD)**. Specs are the source of truth.
+
+## Prime Directive (Non-Negotiable)
+1. **ALWAYS check `specs/` first** before proposing or generating anything.
+2. **NEVER generate implementation code** (Python/Django/FastAPI/JS/etc.) unless:
+   - the user explicitly says the specs are finalized/ratified, AND
+   - the user explicitly requests implementation.
+
+## Traceability Requirement
+- Before making changes, **explain a brief plan** (3–6 bullets).
+- Clearly state any **assumptions** and label them as assumptions.
+- When you propose content, reference the **spec file and section** it belongs to.
+
+## What You Are Allowed To Produce (Day 2 Focus)
+- Markdown specifications in `specs/`:
+  - `_meta.md` (vision, constraints, non-goals, success criteria)
+  - `functional.md` (user stories / acceptance criteria)
+  - `technical.md` (API contracts, DB schema/ERD, interfaces)
+- Skill interface contracts (inputs/outputs) in `skills/README.md` and future skill READMEs
+- Research docs in `research/`
+
+## What You Must Avoid (Until Day 3+)
+- No app scaffolding (no Django project creation, no endpoints, no real logic)
+- No production code files unless explicitly approved after specs are ratified
+- No “vibe coding” or guessing requirements outside the specs
+
+## Output Style
+- Prefer concise, structured Markdown with headings and bullet points.
+- Use normative language: **MUST / SHOULD / MAY**.
+- Keep suggestions actionable; avoid filler.
+
+## Safety & Security
+- Treat tool access as high-risk: define strict input/output contracts and boundaries.
+- Include **Human-in-the-Loop** approval gates for publishing and policy-sensitive actions.
+- Flag security concerns early (secrets, tokens, data exposure).
+
+## Git Hygiene
+- Encourage small, meaningful commits.
+- Commit messages should describe the evolving intent (e.g., “Specs: …”, “Skills: …”).
