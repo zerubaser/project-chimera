@@ -1,0 +1,9 @@
+# IDE / Editor
+.vscode/
+
+# Cursor / MCP local config
+.cursor/mcp.json
+
+# OS
+.DS_Store
+Thumbs.db
