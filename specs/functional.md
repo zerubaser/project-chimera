@@ -198,3 +198,8 @@ Agents must expose execution and availability status.
 - Model training or fine-tuning
 - Real-time social media engagement
 - Optimization of content performance metrics
+
+## Cross-References
+- Technical contracts: `specs/technical.md`
+- Runtime skill contracts: `skills/README.md`
+- Master constraints and non-goals: `specs/_meta.md`

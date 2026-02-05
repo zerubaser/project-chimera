@@ -422,3 +422,8 @@ UI/dashboard implementation
 Real-time comment moderation and engagement automation
 
 Model training / fine-tuning
+
+## Cross-References
+- Functional behaviors and acceptance criteria: `specs/functional.md`
+- Runtime skill contracts: `skills/README.md`
+- Master constraints and success criteria: `specs/_meta.md`
