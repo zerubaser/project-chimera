@@ -26,6 +26,20 @@ This document defines the technical contracts for Project Chimera:
 
 All API contracts use JSON for request and response bodies. All timestamps use ISO 8601 format in UTC (e.g., `2026-02-05T10:00:00Z`).
 
+## Security Intent
+
+- AuthN/AuthZ: JWT-based service tokens for all write endpoints
+- Secrets: Environment variables only (.env never committed)
+- Rate Limiting:
+  - Read endpoints: 60/min
+  - Write endpoints: 10/min
+- Content Safety:
+  - Low confidence (<0.6) → human review required
+- Agent Containment:
+  - No filesystem access
+  - No network calls outside defined skills
+
+
 ### 3.1 `POST /v1/trends/fetch` — Research Agent Capability (F1)
 
 **Functional Mapping**: Maps to F1 (Research Agent — Discover Trending Topics)

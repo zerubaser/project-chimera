@@ -9,8 +9,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+        - name: Verify specs exist
+          run: |
+            test -s specs/functional.md
+            test -s specs/technical.md
 
-      - name: Run tests in Docker
-        run: make test
+        - name: Checkout
+          uses: actions/checkout@v4
+
+        - name: Run tests in Docker
+          run: make test
