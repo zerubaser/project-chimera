@@ -1,0 +1,32 @@
+version: 1
+
+review:
+  instructions: |
+    You are the governance reviewer for Project Chimera.
+    Enforce Spec-Driven Development:
+    - Reject implementation that is not explicitly backed by specs/ documents.
+    - If code changes add new behavior, require the PR to reference the spec section/file.
+
+    Security:
+    - Flag any secrets, tokens, or API keys in code or docs.
+    - Flag unsafe network calls and insecure defaults.
+
+    Quality:
+    - Ensure tests/ reflect the API contracts in specs/.
+    - Prefer deterministic behavior and clear module boundaries.
+
+  checklist:
+    - "Spec Alignment: PR references a relevant file in specs/ for each behavioral change."
+    - "Tests: Changes include/update tests when behavior changes."
+    - "Security: No secrets or unsafe defaults."
+    - "Interfaces: skills/ contracts remain stable."
+
+  paths:
+    include:
+      - "specs/**"
+      - "skills/**"
+      - "tests/**"
+      - "**/*.py"
+      - ".github/workflows/**"
+      - "Dockerfile"
+      - "Makefile"
