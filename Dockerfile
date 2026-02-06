@@ -4,6 +4,8 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
+ENV PYTHONPATH=/app
+
 WORKDIR /app
 
 RUN apt-get update \
@@ -14,7 +16,7 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 ENV PATH="/root/.local/bin:${PATH}"
 
 COPY pyproject.toml uv.lock* README.md ./
-RUN uv sync --frozen
+RUN uv sync --frozen --no-install-project
 COPY . .
 
 
