@@ -107,7 +107,10 @@ Output Contract
 {
   "publish": {
     "publish_id": "pub_001",
-    "status": "SCHEDULED|PUBLISHED|FAILED"
+    "draft_id": "drf_001",
+    "platform": "youtube",
+    "status": "SCHEDULED",
+    "scheduled_at": "2026-02-05T12:00:00Z"
   }
 }
 Rules
