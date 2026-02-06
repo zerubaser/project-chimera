@@ -2,9 +2,8 @@
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
-
-ENV PYTHONPATH=/app
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
 
 WORKDIR /app
 
@@ -17,7 +16,7 @@ ENV PATH="/root/.local/bin:${PATH}"
 
 COPY pyproject.toml uv.lock* README.md ./
 RUN uv sync --frozen --no-install-project
+
 COPY . .
 
-
-CMD ["uv", "run", "pytest", "-q"]
+CMD ["/bin/sh", "-lc", ".venv/bin/pytest -q"]
