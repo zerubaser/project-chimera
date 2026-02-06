@@ -1,0 +1,57 @@
+# Docker ignore file for test-only builds
+# Excludes unnecessary files from Docker build context
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git files
+.git/
+.gitignore
+
+# Documentation and reports (not needed for tests)
+*.md
+!specs/*.md
+day1_project_chimera_report.md
+
+# Docker files themselves
+Dockerfile*
+docker-compose*.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# MCP and Cursor config (not needed in container)
+.cursor/
+.vscode/mcp.json
+
+# Research files (not needed for tests)
+research/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
