@@ -55,3 +55,7 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+!README.md
+!pyproject.toml
+!uv.lock
