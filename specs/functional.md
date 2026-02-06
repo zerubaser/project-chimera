@@ -88,9 +88,9 @@ so that unsafe or non-compliant content is blocked.
   - brand safety
   - confidence threshold
 - Review outcomes MUST be one of:
-  - approved
-  - rejected
-  - requires human review
+  - "APPROVED" — content meets all criteria and can proceed (if confidence threshold met)
+  - "REJECTED" — content violates policies and cannot proceed
+  - "REQUIRES_HUMAN_REVIEW" — content needs human judgment
 - Review results MUST include a reason code.
 - Approved content MAY proceed to publishing workflow.
 - Rejected content MUST NOT proceed further.
